@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "hello": "echo hello world"
+    "hello": "echo hello world",
+    "analyze-sample": "node index.js"
   },
   "devDependencies": {
     "ts-morph": "^10.0.1"

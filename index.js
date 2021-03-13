@@ -74,8 +74,10 @@ const hasAnyJsxElementsInFile = (source) => {
 }
 
 
-const targetDirectory = path.resolve(__dirname, "../zigbang-client")
-const sourceFiles = project.addSourceFilesAtPaths(path.resolve(targetDirectory, "./!(node_modules)**/**.(ts|tsx)"))
+const targetDirectory = path.resolve(__dirname, "./")
+// const targetDirectory = path.resolve(__dirname, "../zigbang-client")
+// const sourceFiles = project.addSourceFilesAtPaths(path.resolve(targetDirectory, "./!(node_modules)**/**.(ts|tsx)"))
+const sourceFiles = project.addSourceFilesAtPaths(path.resolve(targetDirectory, "./**.(ts|tsx)"))
 const result = sourceFiles
     .filter(hasAnyJsxElementsInFile)
     .map((sourceFile) => {
